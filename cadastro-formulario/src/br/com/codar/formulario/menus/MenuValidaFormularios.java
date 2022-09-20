@@ -34,7 +34,7 @@ public class MenuValidaFormularios {
                 }
             }
             if(cont > 1){
-                System.out.println(listaDeValidacao.get(contador).getNomeFormulario().substring(14));
+                System.out.println(listaDeValidacao.get(contador).getNomeFormulario().substring(34));
             }
             cont = 0;
         }

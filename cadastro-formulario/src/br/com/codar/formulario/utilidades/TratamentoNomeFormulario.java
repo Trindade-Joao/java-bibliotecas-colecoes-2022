@@ -14,7 +14,7 @@ public class TratamentoNomeFormulario {
     }
 
     public static int numeroFormulario(){
-        File[] formularios = new File("./formularios").listFiles();
+        File[] formularios = new File("./cadastro-formulario/formularios").listFiles();
         return formularios.length;
     }
 }

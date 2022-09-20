@@ -57,7 +57,7 @@ public class MenuCadastro {
 
 
         if (ValidacaoIdade.validarIdade(respostas)){
-            PrintWriter formularioSalvo = new PrintWriter("./formularios/" + nomeDoFormulario(respostas));
+            PrintWriter formularioSalvo = new PrintWriter("./cadastro-formulario/formularios/" + nomeDoFormulario(respostas));
             respostas.forEach(formularioSalvo::println);
             System.out.println("Salvando formulário");
             formularioSalvo.close();

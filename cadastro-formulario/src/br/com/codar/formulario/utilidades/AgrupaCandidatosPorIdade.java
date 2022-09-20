@@ -15,7 +15,7 @@ public class AgrupaCandidatosPorIdade {
 
 
     public AgrupaCandidatosPorIdade(){
-        File arquivosNaPasta = new File("./formularios");
+        File arquivosNaPasta = new File("./cadastro-formulario/formularios");
         this.listaDeArquivos = new ArrayList<>(List.of(arquivosNaPasta.listFiles()));
 
         this.idades = new TreeSet<>();

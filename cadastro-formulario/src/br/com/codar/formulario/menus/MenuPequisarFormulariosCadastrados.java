@@ -40,7 +40,7 @@ public class MenuPequisarFormulariosCadastrados {
     private void pesquisar(){
         listaValidacao.forEach(cadastro ->{
             if(cadastro.getNomeInscrito().equals(this.nomePesquisado) && cadastro.getEmail().equals(this.emailPesquisado)){
-                System.out.printf("%n%s",cadastro.getNomeFormulario().substring(14));
+                System.out.printf("%n%s",cadastro.getNomeFormulario().substring(34));
             } else{
 
             }

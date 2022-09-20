@@ -11,7 +11,7 @@ public class CarregaListaParaValidacao {
     private List<ValidacaoCadastro> listaDeValidacao;
 
     public CarregaListaParaValidacao(){
-        File formularios = new File("./formularios");
+        File formularios = new File("./cadastro-formulario/formularios");
         this.listaFormularios = new ArrayList<>(List.of(formularios.listFiles()));
         this.listaDeValidacao = new ArrayList<>();
     }
