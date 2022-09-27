@@ -17,7 +17,7 @@ Crie um programa com um menu com as seguintes opções:
 
 ### Menu Candidatar-se
 
-O usuário irá responder as perguntas e conforme ele responde uma pergunta a próxima deve ser exibida. As perguntas do formulário devem estar previamente cadastradas num TXT chamado formulario.txt que deve ser criado dentro do projeto.
+O usuário irá responder as perguntas e conforme ele responde uma pergunta a próxima deve ser exibida. As perguntas do formulário devem estar previamente cadastradas num TXT chamado inscricao.txt que deve ser criado dentro do projeto.
 
 O TXT deve seguir o padrão abaixo:
 
@@ -35,12 +35,12 @@ Dica: ao salvar os formulários no mesmo diretório você consegue saber qual o 
 
 ### Menu Adicionar pergunta ao formulário
 
-Como informado deve possibilitar o usuário adicionar uma nova pergunta ao formulário e salvar o txt formulario.txt com essa alteração.
+Como informado deve possibilitar o usuário adicionar uma nova pergunta ao formulário e salvar o txt inscricao.txt com essa alteração.
 Ao criar a mesma pergunta novamente o sistema não deve duplicar a pergunta dentro do txt e deve manter apenas uma.
 
 ### Menu Remover pergunta do formulário
 
-Como informado deve possibilitar o usuário remover uma pergunta do formulário e salvar o txt formulario.txt com essa alteração.
+Como informado deve possibilitar o usuário remover uma pergunta do formulário e salvar o txt inscricao.txt com essa alteração.
 
 - Não deve ser possível apagar as perguntas de 1 a 4 pois elas são padrão e não podem ser removidas
 
