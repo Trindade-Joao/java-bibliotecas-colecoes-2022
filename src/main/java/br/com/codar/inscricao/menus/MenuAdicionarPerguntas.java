@@ -7,22 +7,13 @@ public class MenuAdicionarPerguntas implements InterfaceMenu{
     }
 
     public void mostrarMenu(){
-        System.out.println("------------------------------------------");
-        System.out.println("|         ADICIONAR PERGUNTA             |");
-        System.out.println("------------------------------------------");
+        System.out.print("""
+                      ------------------------------------------
+                      |         ADICIONAR PERGUNTA             |
+                      ------------------------------------------
+                      
+                      Adicione uma nova Pergunta
+                      => """
+        );
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

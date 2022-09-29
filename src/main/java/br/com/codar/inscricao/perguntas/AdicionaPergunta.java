@@ -9,30 +9,28 @@ public class AdicionaPergunta {
 
     private EntradaTeclado teclado;
     private ValidacaoPerguntasRepetidas validacaoPerguntasRepetidas;
-    private ListaPerguntas listaPerguntas;
+    private ListarPerguntas listarPerguntas;
     private SalvaPerguntas salvaPerguntas;
 
 
-    public AdicionaPergunta(){
-        this.listaPerguntas = new ListaPerguntas();
+    public AdicionaPergunta(EntradaTeclado teclado){
         this.salvaPerguntas = new SalvaPerguntas();
+        this.listarPerguntas = new ListarPerguntas();
+        this.validacaoPerguntasRepetidas = new ValidacaoPerguntasRepetidas(listarPerguntas);
+        this.teclado = teclado;
     }
 
-    public AdicionaPergunta(EntradaTeclado teclado, ValidacaoPerguntasRepetidas validacaoPerguntasRepetidas, ListaPerguntas listaPerguntas, SalvaPerguntas salvaPerguntas) {
+    public AdicionaPergunta(EntradaTeclado teclado, ValidacaoPerguntasRepetidas validacaoPerguntasRepetidas, ListarPerguntas listarPerguntas, SalvaPerguntas salvaPerguntas) {
         this.teclado = teclado;
         this.validacaoPerguntasRepetidas = validacaoPerguntasRepetidas;
-        this.listaPerguntas = listaPerguntas;
+        this.listarPerguntas = listarPerguntas;
         this.salvaPerguntas = salvaPerguntas;
 
     }
 
-    private String entrarComPergunta() {
-        System.out.printf("%nAdicione Uma Nova Pergunta.%n=> ");
-        return teclado.entradaAlfaNumerica();
-    }
-
     public void inserirPerguntaNoFormulario(){
-        String pergunta = entrarComPergunta();
+
+        String pergunta = teclado.entradaAlfaNumerica();
         if(validacaoPerguntasRepetidas.validarPergunta(pergunta)){
             atualizarListaPerguntas(pergunta);
         }else {
@@ -45,7 +43,7 @@ public class AdicionaPergunta {
     }
 
     private void atualizarListaPerguntas(String pergunta){
-        List<String> listaDePerguntasAtualizada = new ArrayList<>(listaPerguntas.getListaDePerguntas());
+        List<String> listaDePerguntasAtualizada = new ArrayList<>(listarPerguntas.getListaDePerguntas());
         String indice = indicePergunta(listaDePerguntasAtualizada.size() + 1);
         listaDePerguntasAtualizada.add(indice + pergunta);
         salvaPerguntas.salvar(listaDePerguntasAtualizada);

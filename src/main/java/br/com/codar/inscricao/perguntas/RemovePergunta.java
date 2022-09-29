@@ -7,23 +7,23 @@ import java.util.List;
 
 public class RemovePergunta {
     private EntradaTeclado teclado;
-    private ListaPerguntas listaPerguntas;
+    private ListarPerguntas listarPerguntas;
     private SalvaPerguntas salvaPerguntas;
 
-    public RemovePergunta(EntradaTeclado teclado, ListaPerguntas listaPerguntas, SalvaPerguntas salvaPerguntas) {
+    public RemovePergunta(EntradaTeclado teclado, ListarPerguntas listarPerguntas, SalvaPerguntas salvaPerguntas) {
         this.teclado = teclado;
-        this.listaPerguntas = listaPerguntas;
+        this.listarPerguntas = listarPerguntas;
         this.salvaPerguntas = salvaPerguntas;
     }
 
-    public RemovePergunta(){
-        this.teclado = new EntradaTeclado();
-        this.listaPerguntas = new ListaPerguntas();
+    public RemovePergunta(EntradaTeclado teclado){
+        this.teclado = teclado;
+        this.listarPerguntas = new ListarPerguntas();
         this.salvaPerguntas = new SalvaPerguntas();
     }
 
     public void remover(){
-        List<String> listaPerguntasCompleta = new ArrayList<>(listaPerguntas.getListaDePerguntas());
+        List<String> listaPerguntasCompleta = new ArrayList<>(listarPerguntas.getListaDePerguntas());
         int numeroPerguntaRetirada = teclado.entradaNumerica();
         if(numeroPerguntaRetirada <= listaPerguntasCompleta.size()){
             if(numeroPerguntaRetirada > 4){

@@ -5,15 +5,15 @@ import java.util.List;
 
 public class ValidacaoPerguntasRepetidas {
 
-    private ListaPerguntas listaPerguntas;
+    private ListarPerguntas listarPerguntas;
 
-    public ValidacaoPerguntasRepetidas(ListaPerguntas listaPerguntas){
-        this.listaPerguntas = listaPerguntas;
+    public ValidacaoPerguntasRepetidas(ListarPerguntas listarPerguntas){
+        this.listarPerguntas = listarPerguntas;
     }
 
 
     public boolean validarPergunta(String pergunta){
-        List<String> listaDePerguntas = new ArrayList<>(listaPerguntas.getListaDePerguntas());
+        List<String> listaDePerguntas = new ArrayList<>(listarPerguntas.getListaDePerguntas());
         List<String> listaDePerguntasTratadas = new ArrayList<>();
         TratamentoPerguntas tratamentoPerguntas = new TratamentoPerguntas();
 

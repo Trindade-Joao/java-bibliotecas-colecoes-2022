@@ -8,12 +8,12 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ListaPerguntasTest {
-    private ListaPerguntas listar;
+class ListarPerguntasTest {
+    private ListarPerguntas listar;
 
     @BeforeEach
     void beforeEach(){
-        this.listar = new ListaPerguntas();
+        this.listar = new ListarPerguntas();
     }
 
     @Test

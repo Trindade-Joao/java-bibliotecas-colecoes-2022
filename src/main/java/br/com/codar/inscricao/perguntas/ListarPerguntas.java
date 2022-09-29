@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ListaPerguntas {
+public class ListarPerguntas {
 
     private EntradaDados entrada;
     private String caminhoDoArquivo = "./";
@@ -14,7 +14,7 @@ public class ListaPerguntas {
 
     private List<String> listaDePerguntas;
 
-    public ListaPerguntas() {
+    public ListarPerguntas() {
         this.entrada = new EntradaDados();
         this.listaDePerguntas = listar();
     }

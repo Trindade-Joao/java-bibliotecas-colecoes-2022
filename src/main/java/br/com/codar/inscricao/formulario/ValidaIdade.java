@@ -1,18 +1,15 @@
-package br.com.codar.inscricao.utilidades;
+package br.com.codar.inscricao.formulario;
 
-import java.util.List;
+public class ValidaIdade {
 
-public class ValidacaoIdade {
-
-    public static boolean validarIdade(List<String> respostas){
+    public boolean validar(String resposta){
         int idade;
         try{
-            idade = Integer.parseInt(respostas.get(2));
+            idade = Integer.parseInt(resposta);
         }catch (NumberFormatException exception){
             System.out.println("Idade com entrada Inválida.");
             return false;
         }
-
         return idade >= 16;
     }
 }

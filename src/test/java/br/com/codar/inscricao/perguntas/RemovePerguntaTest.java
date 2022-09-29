@@ -24,7 +24,7 @@ class RemovePerguntaTest {
     @Mock
     private SalvaPerguntas salvaPerguntas;
     @Mock
-    private ListaPerguntas listaPerguntas;
+    private ListarPerguntas listarPerguntas;
 
     @Captor
     private ArgumentCaptor<List<String>> captor;
@@ -32,7 +32,7 @@ class RemovePerguntaTest {
     @BeforeEach
     void beforeEach(){
         MockitoAnnotations.openMocks(this);
-        this.removePergunta = new RemovePergunta(teclado, listaPerguntas,salvaPerguntas);
+        this.removePergunta = new RemovePergunta(teclado, listarPerguntas,salvaPerguntas);
         this.listaDePerguntas = CriaListaPerguntas.listarPerguntasTeste();
     }
 
@@ -40,7 +40,7 @@ class RemovePerguntaTest {
     void deveriaRemoverAPergunta5(){
 
         when(teclado.entradaNumerica()).thenReturn(5);
-        when(listaPerguntas.getListaDePerguntas()).thenReturn(listaDePerguntas);
+        when(listarPerguntas.getListaDePerguntas()).thenReturn(listaDePerguntas);
 
         removePergunta.remover();
         verify(salvaPerguntas).salvar(captor.capture());
@@ -56,7 +56,7 @@ class RemovePerguntaTest {
     void naoDeveriaRemoverNenhumaPergunta(){
 
         when(teclado.entradaNumerica()).thenReturn(4);
-        when(listaPerguntas.getListaDePerguntas()).thenReturn(listaDePerguntas);
+        when(listarPerguntas.getListaDePerguntas()).thenReturn(listaDePerguntas);
 
         removePergunta.remover();
         verify(salvaPerguntas).salvar(captor.capture());
@@ -71,7 +71,7 @@ class RemovePerguntaTest {
     void naoDeveriaRemoverNenhumaPerguntaPoisONumeroEMaiorQueALista(){
 
         when(teclado.entradaNumerica()).thenReturn(8);
-        when(listaPerguntas.getListaDePerguntas()).thenReturn(listaDePerguntas);
+        when(listarPerguntas.getListaDePerguntas()).thenReturn(listaDePerguntas);
 
         removePergunta.remover();
         verify(salvaPerguntas).salvar(captor.capture());

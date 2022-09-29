@@ -13,8 +13,11 @@ public class EntradaTeclado {
     public int entradaNumerica(){
         try {
             System.out.print("=> ");
-            return Integer.parseInt(this.teclado.next());
+            int numero = Integer.parseInt(this.teclado.next());
+            teclado.nextLine();
+            return numero;
         } catch (NumberFormatException e){
+            teclado.nextLine();
             System.out.println("Entrada Inválida");
             entradaNumerica();
         }
@@ -24,6 +27,12 @@ public class EntradaTeclado {
     public String entradaAlfaNumerica(){
 
         return this.teclado.nextLine();
+    }
+
+    public void continuar(){
+        System.out.printf("%nPressione Enter para continuar");
+            teclado.nextLine();
+
     }
 
     public void encerrarTeclado(){

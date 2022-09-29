@@ -2,10 +2,6 @@ package br.com.codar.inscricao.menus;
 
 public class MenuInicial implements InterfaceMenu {
 
-
-
-
-
     private final String[] itens = {
             "Candidatar-se",
             "Adicionar Pergunta Ao Formulário",

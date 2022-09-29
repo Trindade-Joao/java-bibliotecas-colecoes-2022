@@ -117,4 +117,8 @@ modules.xml
 hs_err_pid*
 replay_pid*
 
+
+
 # End of https://www.toptal.com/developers/gitignore/api/intellij+iml,java
+
+/target/generated-test-sources/test-annotations/
